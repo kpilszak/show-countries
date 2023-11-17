@@ -12,7 +12,7 @@ AJAX app displaying countries' flags.
 
 Welcome to the "Show Countries" project! 🚀 This web application utilizes AJAX technology to dynamically fetch and display countries' flags. It's a visual journey around the world, right from your browser!
 
-The project relies on the [CountryLayer API](https://countrylayer.com) to retrieve accurate and up-to-date information about countries.
+The project relies on the [RestCountries API](https://restcountries.com) to retrieve accurate and up-to-date information about countries.
 
 ## Technologies
 
