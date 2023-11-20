@@ -6,6 +6,7 @@
     </head>
     <body>
         <button onclick=showCountries()>Show Countries</button>
+        <div id="feed"></div>
 
         <script>
             function showCountries() {
@@ -15,6 +16,16 @@
                 xhr.onload = function() {
                     if (xhr.status == 200) {
                         console.log('success');
+                        let countries = JSON.parse(this.response);
+                        console.log(countries);
+                        countries.forEach(country => {
+                            const countryCard = document.createElement('div');
+                            const countryCardImage = document.createElement('img');
+                            countryCard.innerHTML = country.name.common;
+                            countryCardImage.src = country.flags.png;
+                            countryCard.appendChild(countryCardImage);
+                            document.getElementById('feed').appendChild(countryCard);
+                        })
                     }
                 }
 
